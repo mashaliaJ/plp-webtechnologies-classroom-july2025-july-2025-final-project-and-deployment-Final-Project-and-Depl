@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Luxury Cars Store</title>
+  <link rel="stylesheet" href="cart.styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Luxury Cars Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="active">Cart</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="cart">
+      <h2>Your Shopping Cart</h2>
+      <p>Review the items below before checkout.</p>
+
+      <!-- Cart Table -->
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Variation</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example Cart Item -->
+          <tr>
+            <td>Mercedes-Benz S-Class</td>
+            <td>Black, 3.0L</td>
+            <td>$95,000</td>
+            <td><input type="number" value="1" min="1"></td>
+            <td>$95,000</td>
+            <td><button>Remove</button></td>
+          </tr>
+          <tr>
+            <td>BMW 7 Series</td>
+            <td>Blue, 4.0L</td>
+            <td>$88,000</td>
+            <td><input type="number" value="2" min="1"></td>
+            <td>$176,000</td>
+            <td><button>Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Cart Summary -->
+      <div class="cart-summary">
+        <h3>Cart Summary</h3>
+        <p>Subtotal: <strong>$271,000</strong></p>
+        <p>Tax (5%): <strong>$13,550</strong></p>
+        <p>Grand Total: <strong>$284,550</strong></p>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Luxury Cars Store. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

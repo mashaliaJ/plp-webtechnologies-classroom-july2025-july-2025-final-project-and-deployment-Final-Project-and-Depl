@@ -1,0 +1,279 @@
+/*=====================================
+  General & Global Styles
+=======================================*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffd700;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Common Card Style for all pages except Home */
+.about, .products, .contact, .cart {
+    background-color: #fff;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/*=====================================
+  Home Page Specific Styles (Full-Screen)
+=======================================*/
+body#home-page {
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+body#home-page header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+body#home-page main {
+    padding: 0;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 4em;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.5) contrast(1.1);
+}
+
+body#home-page footer {
+    display: none;
+}
+
+/*=====================================
+  Footer
+=======================================*/
+footer {
+    background-color: #222;
+    color: #888;
+    padding: 40px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-container > div {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.footer-container h3, .footer-container h4 {
+    color: #fff;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-container p, .footer-container ul {
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: left;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container ul li {
+    margin-bottom: 10px;
+}
+
+.footer-container a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+    color: #ffd700;
+}
+
+.footer-newsletter input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+    background-color: #ffd700;
+    color: #222;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+    background-color: #e5c100;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/*=====================================
+  Media Queries (Responsive Design)
+=======================================*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .about, .products, .contact, .cart {
+        padding: 30px 20px;
+    }
+    
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container > div {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+    }
+    
+    .footer-container h3, .footer-container h4 {
+        text-align: center;
+    }
+
+    .footer-container p, .footer-container ul {
+        text-align: center;
+    }
+}
